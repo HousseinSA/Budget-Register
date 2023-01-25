@@ -58,7 +58,7 @@ export default function AppContext({children}) {
   }
   return (
     <createContext.Provider
-    // all teh values of context priveder
+    // all the values of context Provider
       value={{
         budgets,
         expenses,

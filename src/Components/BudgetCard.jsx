@@ -20,15 +20,16 @@ export default function BudgetCard({
   return (
     <>
       <Card>
-    
         <Card.Body className={className.join(" ")}>
           <Card.Title className="d-flex justify-content-between align-items-baseline fw-normal mb-3  ">
             <div className="me-auto">{name}</div>
             <div> {currencyFormatter.format(amount)}</div>
-            <div className="text-muted fs-6 ms-2">
-              {/* condition to see if max is deffined that show the max value */}
-              {max && "/" + currencyFormatter.format(max)}
-            </div>
+            {/* condition to see if max is deffined that show the max value */}
+            {max && (
+              <div className="text-muted fs-6 ms-1">
+                / {currencyFormatter.format(max)}
+              </div>
+            )}
           </Card.Title>
           {/* condition to see is max there then show the progress bar */}
           {max && (
