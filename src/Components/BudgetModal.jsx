@@ -3,7 +3,7 @@ import {useRef} from "react"
 import {Button, Form, Modal} from "react-bootstrap"
 import {useAppContext} from "../context/AppContext"
 // importing the needed  componetns for the budgetModal
-export default function BudgetModal({show, handelClose ,}) {
+export default function BudgetModal({show, handelClose}) {
   // getting the addBudget function to add new budget
   const {addBudget} = useAppContext()
   const nameRef = useRef()

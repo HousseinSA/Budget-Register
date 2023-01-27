@@ -4,7 +4,7 @@ import BudgetCard from "./BudgetCard"
 export default function UncategorizedBudgetCard({onViewExpense, addExpense}) {
   // getting the getBudgetId function with useAppContext
   const {getBudgetId} = useAppContext()
-  // calculate the amount  defaultCat expneses 
+  // calculate the amount  defaultCat expneses
   const amount = getBudgetId(DefaultCategory).reduce((total, amount) => {
     return total + amount.expenseAmount
   }, 0)
